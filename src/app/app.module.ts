@@ -21,6 +21,6 @@ import { WebComponent } from './web/web.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [WebComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -72,6 +72,7 @@ export class EmployeeDashboardComponent implements OnInit {
   }
   Edit(data:any) {
     console.log(data);
+    sessionStorage.clear();
     sessionStorage.setItem("_id",data._id);
     this.showadd = false;
     this.showupdate = true;
@@ -105,5 +106,8 @@ export class EmployeeDashboardComponent implements OnInit {
       })
 
   }
-
+  close()
+  {
+    sessionStorage.clear();
+  }
 }
