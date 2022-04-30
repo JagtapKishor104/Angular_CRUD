@@ -2,8 +2,7 @@
   <div class="container-fluid">
     <h3 class="text-light">ANGULAR CRUD</h3>
     <div class="d-flex">
-      <button type="button" data-bs-toggle="modal" (click)="sol()" data-bs-target="#exampleModal"
-        class="btn btn-success">Add Employee</button>
+      <button type="button" data-bs-toggle="modal" (click)="sol()" data-bs-target="#exampleModal" class="btn btn-success">Add Employee</button>
     </div>
   </div>
 </nav>
@@ -28,10 +27,9 @@
         <td>{{data.uemail}}</td>
         <td>{{data.umobile}}</td>
         <td>{{data.usalary}}</td>
-        <td>
-          <button class="btn btn-info me-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            (click)="Edit(data)">Edit</button>
-          <button class="btn btn-danger" (click)="delete(data)">Delete</button>
+        <td class=" d-flex flex-row justify-content-center">
+          <button title="Edit" class="btn btn-info me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Edit(data)"><i class="fa fa-edit"></i></button>
+          <button title="Delete" class="btn btn-danger" (click)="delete(data)"><i class="fas fa-trash"></i></button>
         </td>
       </tr>
     </tbody>
