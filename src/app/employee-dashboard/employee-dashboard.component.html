@@ -7,10 +7,11 @@
   </div>
 </nav>
 <div class="container-fluid table-responsive-lg ">
-  <table class="table mt-3" style="box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);
+  <table class="table  table-hover mt-3 table-bordered border-primary border table-striped border-5" style="box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);">
-    <thead>
+  -moz-box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);
+  ">
+    <thead class="table-dark">
       <tr>
         <th scope="col">Employee ID</th>
         <th scope="col">First Name</th>
@@ -28,7 +29,7 @@
         <td>{{data.ulname}}</td>
         <td>{{data.uemail}}</td>
         <td>{{data.umobile}}</td>
-        <td>{{data.usalary}}</td>
+        <td>{{data.usalary | currency:"INR"}}</td>
         <td class=" d-flex flex-row justify-content-center">
           <button title="Edit" class="btn btn-info me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Edit(data)"><i class="fa fa-edit"></i></button>
           <button title="Delete" class="btn btn-danger" (click)="delete(data)"><i class="fas fa-trash"></i></button>
@@ -50,7 +51,7 @@
         <form [formGroup]="myform">
           <div class="mb-2">
             <label class="form-label">First Name</label>
-            <input type="text" formControlName="fname" class="form-control">
+            <input  type="text" formControlName="fname" class="form-control">
           </div>
           <div class="mb-2">
             <label class="form-label">last Name</label>
