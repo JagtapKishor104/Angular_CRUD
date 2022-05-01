@@ -39,10 +39,18 @@ export class EmployeeDashboardComponent implements OnInit {
       this.service.postusetdetail(this.myform.value).subscribe((posres)=>
       {
         console.log(posres);
-        alert("Data send Successfully");
+        if(posres.msg=="email id already exits")
+        {
+          alert("email id already exits");
+        }
+        else
+        {
+          alert("Data send Successfully");
         let ref=document.getElementById('exampleModal');
         ref?.click(); 
         this.getuser();
+        }
+        
       },(err:HttpErrorResponse)=>
       {
         console.log(err);
