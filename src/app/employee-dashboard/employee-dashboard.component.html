@@ -31,16 +31,14 @@
         <td>{{data.usalary | currency:"INR"}}</td>
         <td class=" d-flex flex-row justify-content-center">
           <button title="Edit" class="btn btn-info me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Edit(data)"><i class="fa fa-edit"></i></button>
-          <button title="Delete" class="btn btn-danger" (click)="delete(data)" ><i  class="fas fa-trash"></i></button>
+          <button title="Delete" class="btn btn-danger" (click)="delete(data)"><i  class="fas fa-trash"></i></button>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
 <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" style="box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);">
+  <div class="modal-dialog" style="box-shadow: 0px 1px 22px 8px rgba(0,0,0,0.75);">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
